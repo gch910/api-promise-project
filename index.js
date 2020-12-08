@@ -1,24 +1,41 @@
+const { writeFile, promises } = require("fs");
 const fetch = require("node-fetch");
-
-// fetch("https://swapi.dev/api/people/1")
-//   .then((res) => res.json())
-//   .then((person) => console.log(person.name));
+const fs = require("fs").promises;
 
 
 
-fetch("https://swapi.dev/api/planets/1")
-  .then((res) => res.json())
-  .then((planet) => console.log(planet.name));
+// const getFilms = (films) => {
 
+//     const filmPromises = films.map(film => {
+//         return fetch(film)
+//         .then((res) => res.json())
+//     })
+//    return Promise.all(filmPromises)
 
+//  }
 
-Promise.all([
-    fetch('http://swapi.dev/api/films/1/'),
-    fetch( 'http://swapi.dev/api/films/2/'),
-    fetch('http://swapi.dev/api/films/3/'),
-    fetch('http://swapi.dev/api/films/6/')
     
-])
-.then(results => console.log(results));
+// }
+
+//  fetch("https://swapi.dev/api/people/1")
+//   .then((res) => res.json())
+//   .then((person) => getFilms(person.films))
+//   .then((value) => console.log(value))
+
+
+
+//fetch planet
+// fetch("https://swapi.dev/api/planets/1")
+//   .then((res) => res.json())
+//   .then((planet) => console.log(planet.name));
+
+
+
+
+//  fs.writeFile("film-info.txt", filmString())
+     
+
+
+
 
 
